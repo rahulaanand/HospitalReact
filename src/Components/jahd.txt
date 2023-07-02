@@ -1,0 +1,190 @@
+ <section id="departments" class="departments">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Departments</h2>
+      <p>"Medicine is not only a science; it is an art of compassion, healing, and restoring hope."</p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Cardiology</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Dental</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Neurology</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Orthopedics</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-5">General Health Check-up</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-9">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="tab-1">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Cardiology</h3>
+                                   <p>Discover exceptional cardiac care at our Cardiology Department. Our dedicated team of cardiologists provides comprehensive services using advanced technology for accurate diagnoses and personalized treatment plans. From non-invasive tests to expert interventions, we prioritize your heart health with compassion and expertise. Experience the highest quality care with us.</p>
+
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/departments-1.jpg" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-2">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                      <h3>Dental</h3>
+                <p>Experience exceptional dental care at our Dental Department. Our expert team of dentists and hygienists deliver top-quality services using advanced techniques and state-of-the-art equipment. From routine check-ups to specialized treatments, we prioritize your oral health with precision and care.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/departments-2.jpg" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-3">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                   <h3>Neurology</h3>
+                <p>Discover advanced neurological care at our Neurology Department. Our expert team of neurologists provides exceptional services using cutting-edge technology for accurate diagnoses and personalized treatment plans. From comprehensive evaluations to innovative therapies, we prioritize your neurological well-being with expertise and compassion.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/departments-3.jpg" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-4">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                     <h3>Orthopedics</h3>
+                <p>Experience exceptional orthopedic care at our Orthopedics Department. Our skilled team of orthopedic specialists offers advanced treatments and state-of-the-art procedures for a wide range of musculoskeletal conditions. From diagnosis to rehabilitation, we prioritize your mobility and well-being with expertise and compassion.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/departments-4.jpg" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-5">
+                <div class="row gy-4">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                   
+
+                   
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/departments-5.jpg" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+     <section id="departments" className="departments">
+  <div className="container">
+
+    <div className="section-title">
+      <h2>Departments</h2>
+      <p>"Medicine is not only a science; it is an art of compassion, healing, and restoring hope."</p>
+    </div>
+    <br/><br/>
+
+    
+
+    <div className="row gy-4">
+      <div className="col-lg-3">
+        <ul className="nav nav-tabs flex-column">
+          <li className="nav-item">
+            <a className="nav-link active show" data-bs-toggle="tab" href="#tab-1">Cardiology</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" data-bs-toggle="tab" href="#tab-2">Dental</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" data-bs-toggle="tab" href="#tab-3">Neurology</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" data-bs-toggle="tab" href="#tab-4">Orthopedics</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" data-bs-toggle="tab" href="#tab-5">General Health Check-up</a>
+          </li>
+        </ul>
+      </div>
+
+      <div className="col-lg-9">
+        <div className="tab-content">
+          <div className="tab-pane active show" id="tab-1">
+            <div className="row gy-4">
+              <div className="col-lg-8 details order-2 order-lg-1">
+                <h3>Cardiology</h3>
+                <p>Discover exceptional cardiac care at our Cardiology Department. Our dedicated team of cardiologists provides comprehensive services using advanced technology for accurate diagnoses and personalized treatment plans. From non-invasive tests to expert interventions, we prioritize your heart health with compassion and expertise. Experience the highest quality care with us.</p>
+              </div>
+              <div className="col-lg-4 text-center order-1 order-lg-2">
+                <img src={department1} alt="" className="img-fluid shadow" style={{ width: "250px", height: "250px" }} />
+              </div>
+            </div>
+          </div>
+          <div className="tab-pane" id="tab-2">
+            <div className="row gy-4">
+              <div className="col-lg-8 details order-2 order-lg-1">
+                <h3>Dental</h3>
+                <p>Experience exceptional dental care at our Dental Department. Our expert team of dentists and hygienists deliver top-quality services using advanced techniques and state-of-the-art equipment. From routine check-ups to specialized treatments, we prioritize your oral health with precision and care.</p>
+              </div>
+              <div className="col-lg-4 text-center order-1 order-lg-2">
+                <img src={department2} alt="" className="img-fluid shadow" style={{ width: "250px", height: "250px" }} />
+              </div>
+            </div>
+          </div>
+          <div className="tab-pane" id="tab-3">
+            <div className="row gy-4">
+              <div className="col-lg-8 details order-2 order-lg-1">
+                <h3>Neurology</h3>
+                <p>Discover advanced neurological care at our Neurology Department. Our expert team of neurologists provides exceptional services using cutting-edge technology for accurate diagnoses and personalized treatment plans. From comprehensive evaluations to innovative therapies, we prioritize your neurological well-being with expertise and compassion.</p>
+              </div>
+              <div className="col-lg-4 text-center order-1 order-lg-2">
+                <img src={department3} alt="" className="img-fluid shadow" style={{ width: "250px", height: "250px" }} />
+              </div>
+            </div>
+          </div>
+          <div className="tab-pane" id="tab-4">
+            <div className="row gy-4">
+              <div className="col-lg-8 details order-2 order-lg-1">
+                <h3>Orthopedics</h3>
+                <p>Experience exceptional orthopedic care at our Orthopedics Department. Our skilled team of orthopedic specialists offers advanced treatments and state-of-the-art procedures for a wide range of musculoskeletal conditions. From diagnosis to rehabilitation, we prioritize your mobility and well-being with expertise and compassion.</p>
+              </div>
+              <div className="col-lg-4 text-center order-1 order-lg-2">
+                <img src={department4} alt="" className="img-fluid shadow" style={{ width: "250px", height: "250px" }} />
+              </div>
+            </div>
+          </div>
+          <div className="tab-pane" id="tab-5">
+            <div className="row gy-4">
+              <div className="col-lg-8 details order-2 order-lg-1">
+                <h3>General Health Check-up</h3>
+                <p>Prioritize your overall well-being with our comprehensive General Health Check-up. Our dedicated team of healthcare professionals provides a thorough evaluation of your health, including vital signs, blood tests, and preventive screenings. With personalized recommendations and expert guidance, we empower you to take control of your health and lead a fulfilling life. Invest in your well-being with our trusted General Health Check-up today.</p>
+              </div>
+              <div className="col-lg-4 text-center order-1 order-lg-2">
+                <img src={department5} alt="" className="img-fluid shadow" style={{ width: "250px", height: "250px" }} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
