@@ -779,7 +779,7 @@ body {
   }
   
   .about .video-box {
-    background: url("") center center no-repeat;
+
     background-size: cover;
     min-height: 500px;
   }
@@ -1696,4 +1696,9 @@ body {
     background: #1c84e3;
     color: #fff;
     text-decoration: none;
+  }
+
+  .tab-pane
+  {
+    margin-top: 10px;
   }

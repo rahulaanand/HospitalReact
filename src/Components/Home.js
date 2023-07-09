@@ -6,31 +6,51 @@ import department3 from './Assets/img/departments3.jpg'
 import department4 from './Assets/img/department4.jpg'
 import department5 from './Assets/img/department5.jpg'
 import './Home.css';
+import { FaHome } from 'react-icons/fa';
 
 function Home() {
   const [doctors, setDoctors] = useState([]);
 
   const [activeTab, setActiveTab] = useState('tab-1');
 
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+
   const handleTabChange = (tabId) => {
     setActiveTab(tabId);
   };
 
+// Function to handle sign out
+const handleSignOut = () => {
+  // Remove token from local storage
+  localStorage.removeItem('token');
+  setIsAuthenticated(false);
+};
+
   useEffect(() => {
-    fetch('https://localhost:5006/api/Doctors/Accepted status')
+    const token = localStorage.getItem('token');
+    if (token) {
+      setIsAuthenticated(true);
+    }
+    fetch('https://localhost:5006/api/Doctors/Accepted status',{
+      method: 'GET',
+    headers: {
+      'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    })
       .then(response => response.json())
       .then(data => setDoctors(data))
       .catch(error => console.log(error));
   }, []);
 
   return (
-    <div>
+    <div >
       <header id="header" className="fixed-top">
         <div className="container d-flex align-items-center">
           <h1 className="logo me-auto"><a href="/">One-Health</a></h1>
           <nav id="navbar" className="navbar order-last order-lg-0">
             <ul>
-              <li><a className="nav-link scrollto active" href="/">Home</a></li>
+              <li><a className="nav-link scrollto active" href="/"> <FaHome />_Home</a></li>
               <li><a className="nav-link scrollto" href="#departments">Departments</a></li>
               <li><a className="nav-link scrollto" href="#services">Services</a></li>
               <li><a className="nav-link scrollto" href="/doctors">Doctors</a></li>
@@ -40,9 +60,15 @@ function Home() {
           <a href="#appointment" className="appointment-btn scrollto">
             <span className="d-none d-md-inline" href="">Make an</span> Appointment
           </a>
-          <a href="/loginp" className="appointment-btn scrollto">
-            <span className="d-none d-md-inline" href="/loginp">Login/</span>Sign Up
-          </a>
+          {isAuthenticated ? (
+        <a href="/" className="appointment-btn scrollto" onClick={handleSignOut}>
+          <span className="d-none d-md-inline">Sign Out</span>
+        </a>
+      ) : (
+        <a href="/loginx" className="appointment-btn scrollto">
+          <span className="d-none d-md-inline">Login/</span>Sign Up
+        </a>
+      )}
         </div>
         
       </header>
@@ -68,8 +94,11 @@ function Home() {
               At One-Health, we believe in the power of comprehensive healthcare that encompasses the well-being of individuals, animals, and the environment. Our hospital is named "One-Health" to reflect our commitment to delivering a holistic approach to healthcare, with a focus on integrated services, preventive medicine, community engagement, and a unique brand identity.
               </p>
               <div className="text-center">
-                <a href="#" className="more-btn">Learn More <i className="bx bx-chevron-right"></i></a>
+                <a href="#" className="more-btn">
+                  Learn More <i className="bx bx-chevron-right"></i>
+                </a>
               </div>
+
             </div>
           </div>
           <div className="col-lg-8 d-flex align-items-stretch">
@@ -103,16 +132,16 @@ function Home() {
       </div>
     </section>
 
-    <section id="departments" className="departments" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '10%' }}>
+<section id="departments" className="departments" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '10px' }}>
   <div className="container">
     <div className="section-title">
       <h2>Departments</h2>
-      <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      <p>Our medical facility is equipped with a comprehensive range of specialized departments, staffed by highly skilled professionals dedicated to providing exceptional care and treatment. From cardiology and orthopedics to neurology and pediatrics, each department is tailored to address specific healthcare needs, ensuring that our patients receive the highest level of expertise and personalized attention.</p>
     </div>
 
-    <div className="row gy-4">
-      <div className="col-lg-3">
-        <ul className="nav nav-tabs flex-column" style={{ position: 'sticky', top: '20px' }}>
+    <div className="row gy-4" style={{paddingTop: '150px'}}>
+      <div className="col-lg-3" >
+        <ul className="nav nav-tabs flex-column" style={{ position: 'sticky', marginTop: '20px'}}>
           <li className="nav-item">
             <a
               className={`nav-link ${activeTab === 'tab-1' ? 'active show' : ''}`}
@@ -240,31 +269,48 @@ function Home() {
 </section>
 
 
+
 <section>
+<div className="section-title">
+      <h2>Doctors</h2>
+      <h4>Prescribing Care, Healing Lives: Our Doctors Make the Difference...</h4>
+    </div>
 <div className="container">
   <div className="row">
     {doctors.slice(0, 3).map(doctor => (
       <div key={doctor.doctorId} className="col-md-4">
         <div className="card my-bg-glass">
-        <img
-  src={`https://localhost:5006/Uploads/${doctor.doctorImage}`}
-  className="card-img-top rounded-circle mx-auto d-block"
-  alt={doctor.doctorName}
-  style={{ width: "150px", height: "150px", padding: "10px" }}
-/>
-
+          <div
+            style={{
+              overflow: "hidden",
+              borderRadius: "50%",
+              width: "150px",
+              height: "150px",
+              margin: "20px auto 0",
+            }}
+          >
+            <img
+              src={`https://localhost:5006/Uploads/${doctor.doctorImage}`}
+              className="card-img-top"
+              alt={doctor.doctorName}
+              style={{
+                objectFit: "cover",
+                width: "100%",
+                height: "100%",
+                transform: "scale(1.2)",
+              }}
+            />
+          </div>
           <div className="card-body">
             <h5 className="card-title">{doctor.doctorName}</h5>
             <p className="card-text">Specialization: {doctor.doctorSpeciality}</p>
-            
             <p className="card-text">Description: {doctor.description}</p>
-
           </div>
         </div>
       </div>
     ))}
-  
-</div><br/><br/>
+  </div>
+<br/><br/>
 
     <Link to="/doctors" className="btn btn-primary">Know More</Link>
   </div>
@@ -312,15 +358,15 @@ function Home() {
     </main>
 
     <footer id="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4">
+  <div className="container">
+    <div className="row">
+      <div className="col-lg-4">
         <h4>One-Health</h4>
         <p>
           &copy; <span id="current-year"></span> One-Health. All Rights Reserved.
         </p>
       </div>
-      <div class="col-lg-8 text-right">
+      <div className="col-lg-8 text-right">
       <p>
           Address: 404 Laugh Avenue, Giggle City, HA-HA 101, United Laughterdom<br/>
       
